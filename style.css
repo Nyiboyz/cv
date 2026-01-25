@@ -1,12 +1,34 @@
-html { scroll-behavior: smooth; }
-body { margin:0; font-family:Segoe UI,sans-serif; background:#0f172a; color:#e5e7eb; }
-nav { display:flex; justify-content:space-between; padding:15px 40px; background:#020617; position:sticky; top:0; }
-nav a { color:#38bdf8; text-decoration:none; margin:0 10px; }
-.section { max-width:950px; margin:auto; padding:80px 20px; opacity:0; transform:translateY(40px); transition:.8s; }
-.section.show { opacity:1; transform:translateY(0); }
-.profile { width:180px; border-radius:50%; border:4px solid #38bdf8; animation:float 4s ease-in-out infinite; }
-@keyframes float { 0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)} }
-.card { background:#020617; padding:20px; border-radius:12px; margin-bottom:20px; transition:.3s; }
-.card:hover { transform:translateY(-6px); box-shadow:0 10px 25px rgba(56,189,248,.15); }
-.skills span { display:inline-block; margin:6px; padding:8px 14px; border:1px solid #1e293b; border-radius:6px; }
-footer { text-align:center; padding:25px; color:#94a3b8; }
+/* NAVBAR ACTIVE EFFECT */
+nav a.active {
+    color: #7dd3fc;
+    border-bottom: 2px solid #7dd3fc;
+    padding-bottom: 4px;
+}
+
+/* SECTION TRANSITION */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PARALLAX HEADER */
+#home {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('profile.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+#home h1, #home h3 {
+    animation: fadeInDown 1s ease-out both;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
