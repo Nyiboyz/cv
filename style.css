@@ -1,34 +1,13 @@
-/* NAVBAR ACTIVE EFFECT */
-nav a.active {
-    color: #7dd3fc;
-    border-bottom: 2px solid #7dd3fc;
-    padding-bottom: 4px;
-}
-
-/* SECTION TRANSITION */
-.section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* PARALLAX HEADER */
-#home {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('profile.jpg') no-repeat center / cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-}
-#home h1, #home h3 {
-    animation: fadeInDown 1s ease-out both;
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+body{margin:0;font-family:Segoe UI,sans-serif;background:#0f172a;color:#e5e7eb}
+.navbar{position:sticky;top:0;background:#020617;display:flex;justify-content:space-between;padding:12px 30px;z-index:999}
+.navbar ul{list-style:none;display:flex;gap:15px}
+.navbar a{color:#38bdf8;text-decoration:none;padding:8px 16px;border-radius:20px}
+.navbar a:hover{background:#38bdf8;color:#020617}
+.section{max-width:950px;margin:auto;padding:90px 20px;opacity:0;transform:translateY(40px);transition:.8s}
+.section.show{opacity:1;transform:translateY(0)}
+.hero{text-align:center}
+.avatar{width:160px;border-radius:50%;border:4px solid #38bdf8;animation:float 4s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.card{background:#020617;padding:20px;border-radius:12px;margin-bottom:20px}
+.skills span{display:inline-block;margin:6px;padding:8px 14px;border-radius:20px;border:1px solid #1e293b}
+footer{text-align:center;padding:25px;color:#94a3b8}
