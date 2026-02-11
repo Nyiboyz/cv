@@ -180,3 +180,27 @@ footer{
   }
 
 }
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* Mobile menu */
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .navbar ul{
+    display:none;
+    flex-direction:column;
+    width:100%;
+  }
+
+  .navbar ul.show{
+    display:flex;
+  }
+}
+
