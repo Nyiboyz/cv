@@ -1,13 +1,182 @@
-body{margin:0;font-family:Segoe UI,sans-serif;background:#0f172a;color:#e5e7eb}
-.navbar{position:sticky;top:0;background:#020617;display:flex;justify-content:space-between;padding:12px 30px;z-index:999}
-.navbar ul{list-style:none;display:flex;gap:15px}
-.navbar a{color:#38bdf8;text-decoration:none;padding:8px 16px;border-radius:20px}
-.navbar a:hover{background:#38bdf8;color:#020617}
-.section{max-width:950px;margin:auto;padding:90px 20px;opacity:0;transform:translateY(40px);transition:.8s}
-.section.show{opacity:1;transform:translateY(0)}
-.hero{text-align:center}
-.avatar{width:160px;border-radius:50%;border:4px solid #38bdf8;animation:float 4s ease-in-out infinite}
-@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
-.card{background:#020617;padding:20px;border-radius:12px;margin-bottom:20px}
-.skills span{display:inline-block;margin:6px;padding:8px 14px;border-radius:20px;border:1px solid #1e293b}
-footer{text-align:center;padding:25px;color:#94a3b8}
+body{
+  margin:0;
+  font-family:Segoe UI,sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  background:#020617;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 30px;
+  z-index:999;
+}
+
+.logo{
+  font-weight:bold;
+}
+
+.navbar ul{
+  list-style:none;
+  display:flex;
+  gap:15px;
+  margin:0;
+  padding:0;
+}
+
+.navbar a{
+  color:#38bdf8;
+  text-decoration:none;
+  padding:8px 16px;
+  border-radius:20px;
+}
+
+.navbar a:hover{
+  background:#38bdf8;
+  color:#020617;
+}
+
+/* SECTION */
+.section{
+  max-width:950px;
+  margin:auto;
+  padding:70px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+}
+
+.section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+}
+
+.avatar{
+  width:160px;
+  max-width:45vw;
+  border-radius:50%;
+  border:4px solid #38bdf8;
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+  100%{transform:translateY(0)}
+}
+
+/* CARDS */
+.card{
+  background:#020617;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+/* SKILLS */
+.skills span{
+  display:inline-block;
+  margin:6px;
+  padding:8px 14px;
+  border-radius:20px;
+  border:1px solid #1e293b;
+  font-size:14px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#94a3b8;
+}
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 20px;
+  }
+
+  .navbar ul{
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:10px;
+  }
+
+  .navbar a{
+    padding:6px 12px;
+    font-size:14px;
+  }
+
+  .section{
+    padding:50px 18px;
+  }
+
+  h1{
+    font-size:26px;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  h3{
+    font-size:18px;
+  }
+
+  p, li{
+    font-size:15px;
+    line-height:1.6;
+  }
+
+  .avatar{
+    width:120px;
+  }
+
+  .card{
+    padding:16px;
+  }
+}
+
+
+/* SMALL PHONES */
+@media (max-width:480px){
+
+  .navbar{
+    padding:12px 15px;
+  }
+
+  .navbar ul{
+    justify-content:center;
+    width:100%;
+  }
+
+  .section{
+    padding:40px 15px;
+  }
+
+  .avatar{
+    width:100px;
+  }
+
+  h1{
+    font-size:22px;
+  }
+
+}
