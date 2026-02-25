@@ -1,159 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Kyaw Nyi Nyi Maung | IT Engineer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Kyaw Nyi Nyi Maung | IT Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">Kyaw Nyi Nyi Maung</div>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-  <ul id="navMenu">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+<nav class="navbar glass-nav">
+    <div class="nav-container">
+        <div class="logo">Kyaw <span>Nyi</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul id="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+    </div>
 </nav>
 
-
-<section id="home" class="section hero">
-  <img src="profile.jpg" class="avatar">
-  <h1>Kyaw Nyi Nyi Maung</h1>
-  <h3>System Administrator | IT Support Engineer</h3>
-  <p>8+ Years Experience in Infrastructure, Networking & Virtualization</p>
+<section id="home" class="section hero popup">
+    <div class="hero-content">
+        <img src="profile.jpg" alt="Kyaw Nyi Nyi Maung" class="avatar">
+        <h1>Kyaw Nyi Nyi Maung</h1>
+        <h3 class="text-accent">System Administrator | IT Support Engineer</h3>
+        <p class="subtitle">8+ Years Experience in Infrastructure, Networking & Virtualization</p>
+        
+        <div class="hero-actions no-print">
+            <a href="#contact" class="btn"><i class="fa-solid fa-envelope"></i> Hire Me</a>
+            <button onclick="window.print()" class="btn btn-outline"><i class="fa-solid fa-download"></i> Download CV</button>
+        </div>
+    </div>
 </section>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    IT System Administrator with over 8 years of experience in infrastructure support, Windows 
-Server administration, virtualization (VMware/Proxmox), networking (CCNA certified), and 
-enterprise IT operations. Skilled in AD, DNS/DHCP, Microsoft 365, VPNs, firewall 
-configurations, monitoring tools, and IT asset management. Strong background supporting 
-logistics, construction, telecommunications, and industrial terminal environments. Proactive 
-problem solver with hands-on expertise managing servers, network infrastructure, security 
-systems, and end-user support.
-  </p>
+<section id="about" class="section popup">
+    <div class="section-header">
+        <h2><i class="fa-solid fa-user"></i> About Me</h2>
+    </div>
+    <div class="glass-card">
+        <p>
+            IT System Administrator with over 8 years of experience in infrastructure support, Windows 
+            Server administration, virtualization (VMware/Proxmox), networking (CCNA certified), and 
+            enterprise IT operations. Skilled in AD, DNS/DHCP, Microsoft 365, VPNs, firewall 
+            configurations, monitoring tools, and IT asset management. Strong background supporting 
+            logistics, construction, telecommunications, and industrial terminal environments. Proactive 
+            problem solver with hands-on expertise managing servers, network infrastructure, security 
+            systems, and end-user support.
+        </p>
+    </div>
 </section>
 
-<section id="experience" class="section">
-  <h2>Work Experience</h2>
+<section id="experience" class="section popup">
+    <div class="section-header">
+        <h2><i class="fa-solid fa-briefcase"></i> Work Experience</h2>
+    </div>
+    
+    <div class="timeline">
+        <div class="card glass-card popup">
+            <div class="card-header">
+                <div>
+                    <h3>System Administrator / IT Support Engineer</h3>
+                    <p class="company"><i class="fa-solid fa-building"></i> International Bulk Terminal Thilawa (IBTT)</p>
+                </div>
+                <span class="badge">Oct 2025 – Present</span>
+            </div>
+            <ul class="task-list">
+                <li>Administer Microsoft Server 2012 domains, Active Directory users, groups, and GPO.</li>
+                <li>Manage Dell servers running Proxmox with virtualized environments.</li>
+                <li>Configure and maintain Cisco Meraki firewalls, routing, and network security.</li>
+                <li>Manage UniFi access points and wireless network infrastructure.</li>
+                <li>Implement and support ITSM tools including GLPI and Snipe-IT for tickets and asset tracking.</li>
+                <li>Conduct server backups, patch management, monitoring, and system hardening.</li>
+                <li>Provide end-to-end IT support across operations, terminals, logistics, and admin departments.</li>
+                <li>Maintain CCTV, access control, and networking for industrial operations.</li>
+                <li>Coordinate with vendors for hardware, AMC, and software requirements.</li>
+                <li>Perform troubleshooting of applications, printers, and network connectivity across the terminal.</li>
+            </ul>
+        </div>
 
-  <div class="card">
-    <h3>System Administrator / IT Support Engineer</h3>
-    <p><b>International Bulk Terminal Thilawa (IBTT)</b> | Oct 2025 – Present</p>
-    <ul>
-      <li>Administer Microsoft Server 2012 domains, Active Directory users, groups, and GPO.</li>
-      <li>Manage Dell servers running Proxmox with virtualized environments including: </li>
-      <li>Configure and maintain Cisco Meraki firewalls, routing, and network security.</li>
-      <li>Manage UniFi access points and wireless network infrastructure. </li>
-      <li>Implement and support ITSM tools including GLPI and Snipe-IT for tickets and asset 
-tracking. </li>
-	<li>Conduct server backups, patch management, monitoring, and system hardening.</li>
-	<li>Provide end-to-end IT support across operations, terminals, logistics, and admin 
-departments.</li>
-	<li>Maintain CCTV, access control, and networking for industrial operations. </li>
-	<li>Coordinate with vendors for hardware, AMC, and software requirements.</li>
-	<li>Perform troubleshooting of applications, printers, and network connectivity across the 
-terminal. </li>
-    </ul>
-  </div>
+        <div class="card glass-card popup">
+            <div class="card-header">
+                <div>
+                    <h3>Field Office Engineer (End User Support)</h3>
+                    <p class="company"><i class="fa-solid fa-building"></i> Diyar United (Ooredoo Vendor)</p>
+                </div>
+                <span class="badge">May 2025 – Oct 2025</span>
+            </div>
+            <ul class="task-list">
+                <li>Provided L1/L2 support on desktops, laptops, macOS/Windows, and Microsoft 365.</li>
+                <li>Managed AD, OUs, password resets, lockouts, and permissions.</li>
+                <li>Supported VPN and remote access technologies.</li>
+                <li>Resolved incidents within SLA via ticketing tools.</li>
+                <li>Documented IT procedures and knowledge base articles.</li>
+            </ul>
+        </div>
 
-  <div class="card">
-    <h3>Field Office Engineer (End User Support) </h3>
-    <p><b>Diyar United (Ooredoo Vendor)</b> | May 2025 – Oct 2025</p>
-    <ul>
-      <li>Provided L1/L2 support on desktops, laptops, macOS/Windows, and Microsoft 365. </li>
-      <li>Managed AD, OUs, password resets, lockouts, and permissions. </li>
-      <li>Supported VPN and remote access technologies.</li>
-      <li>Resolved incidents within SLA via ticketing tools. </li>
-	<li>Documented IT procedures and knowledge base articles. </li>
-    </ul>
-  </div>
+        <div class="card glass-card popup">
+            <div class="card-header">
+                <div>
+                    <h3>Senior IT Executive</h3>
+                    <p class="company"><i class="fa-solid fa-building"></i> Super Light Logistics</p>
+                </div>
+                <span class="badge">Feb 2024 – May 2025</span>
+            </div>
+            <ul class="task-list">
+                <li>Delivered L1/L2 support for desktops, laptops, printers, and mobile devices.</li>
+                <li>Managed Windows Servers (AD, DNS, DHCP, File/Print, Backup).</li>
+                <li>Configured AD accounts, groups, GPOs, and policies.</li>
+                <li>Supported VMware/Proxmox virtualization environments.</li>
+                <li>Assisted with networking—switches, routers, firewalls, Wi-Fi.</li>
+                <li>Managed CCTV, ELV systems, access control, and PA systems.</li>
+                <li>User onboarding/offboarding and access provisioning.</li>
+            </ul>
+        </div>
 
-  <div class="card">
-    <h3>Senior IT Executive</h3>
-    <p><b>Super Light Logistics</b> | Feb 2024 – May 2025</p>
-    <ul>
-      <li>Delivered L1/L2 support for desktops, laptops, printers, and mobile devices. </li>
-      <li>Managed Windows Servers (AD, DNS, DHCP, File/Print, Backup).</li>
-      <li>Configured AD accounts, groups, GPOs, and policies. </li>
-	<li>Supported VMware/Proxmox virtualization environments.</li>
-	<li>Assisted with networking—switches, routers, firewalls, Wi-Fi. </li>
-	<li>Managed CCTV, ELV systems, access control, and PA systems.</li>
-	<li>User onboarding/offboarding and access provisioning.</li>
-    </ul>
-  </div>
+        <div class="card glass-card popup">
+            <div class="card-header">
+                <div>
+                    <h3>IT Executive</h3>
+                    <p class="company"><i class="fa-solid fa-building"></i> Starhigh Asia Pacific</p>
+                </div>
+                <span class="badge">Jul 2020 – Feb 2024</span>
+            </div>
+            <ul class="task-list">
+                <li>Windows Server, DNS, DHCP, GPO</li>
+                <li>Firewall and VPN support</li>
+                <li>System maintenance and monitoring</li>
+            </ul>
+        </div>
 
-  <div class="card">
-    <h3>IT Executive</h3>
-    <p><b>Starhigh Asia Pacific</b> | Jul 2020 – Feb 2024</p>
-    <ul>
-      <li>Windows Server, DNS, DHCP, GPO</li>
-      <li>Firewall and VPN support</li>
-      <li>System maintenance and monitoring</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>IT Support</h3>
-    <p><b>Myat Mi Ba Construction Group</b> | Jul 2016 – Jun 2018</p>
-    <ul>
-      <li>Desktop & network support</li>
-      <li>Active Directory management</li>
-      <li>End-user troubleshooting</li>
-    </ul>
-  </div>
+        <div class="card glass-card popup">
+            <div class="card-header">
+                <div>
+                    <h3>IT Support</h3>
+                    <p class="company"><i class="fa-solid fa-building"></i> Myat Mi Ba Construction Group</p>
+                </div>
+                <span class="badge">Jul 2016 – Jun 2018</span>
+            </div>
+            <ul class="task-list">
+                <li>Desktop & network support</li>
+                <li>Active Directory management</li>
+                <li>End-user troubleshooting</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section id="education" class="section">
-  <h2>Education & Certifications</h2>
-  <ul>
-    <li>B.A English – Dagon University (2017)</li>
-    <li>Diploma in Network Engineering – NMD College (2019)</li>
-    <li>CCNA – Cisco</li>
-    <li>AWS Cloud Practitioner Essentials</li>
-    <li>Google IT Support</li>
-    <li>Fortinet Certified Associate</li>
-    <li>Linux Foundation</li>
-    <li>Microsoft 365</li>
-  </ul>
+<section id="education" class="section popup">
+    <div class="section-header">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Education & Certifications</h2>
+    </div>
+    
+    <div class="grid-2">
+        <div class="glass-card">
+            <h3 style="margin-bottom: 15px; color: #fff;">Formal Education</h3>
+            <ul class="task-list">
+                <li><i class="fa-solid fa-building-columns text-accent"></i> <strong>B.A English</strong> – Dagon University (2017)</li>
+                <li><i class="fa-solid fa-certificate text-accent"></i> <strong>Diploma in Network Engineering</strong> – NMD College (2019)</li>
+            </ul>
+        </div>
+        <div class="glass-card">
+            <h3 style="margin-bottom: 15px; color: #fff;">Certifications</h3>
+            <ul class="task-list">
+                <li><i class="fa-solid fa-network-wired text-accent"></i> CCNA – Cisco</li>
+                <li><i class="fa-brands fa-aws text-accent"></i> AWS Cloud Practitioner Essentials</li>
+                <li><i class="fa-brands fa-google text-accent"></i> Google IT Support</li>
+                <li><i class="fa-solid fa-shield-virus text-accent"></i> Fortinet Certified Associate</li>
+                <li><i class="fa-brands fa-linux text-accent"></i> Linux Foundation</li>
+                <li><i class="fa-brands fa-windows text-accent"></i> Microsoft 365</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section id="skills" class="section">
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <span>Windows Server</span>
-    <span>Active Directory</span>
-    <span>DNS / DHCP</span>
-    <span>VMware</span>
-    <span>Proxmox</span>
-    <span>Firewall</span>
-    <span>VPN</span>
-    <span>GLPI</span>
-    <span>Snipe-IT</span>
-    <span>Backup</span>
-    <span>Monitoring</span>
-  </div>
+<section id="skills" class="section popup">
+    <div class="section-header">
+        <h2><i class="fa-solid fa-microchip"></i> Technical Skills</h2>
+    </div>
+    <div class="glass-card skills-container text-center">
+        <span class="skill-tag">Windows Server</span>
+        <span class="skill-tag">Active Directory</span>
+        <span class="skill-tag">DNS / DHCP</span>
+        <span class="skill-tag">VMware</span>
+        <span class="skill-tag">Proxmox</span>
+        <span class="skill-tag">Firewall</span>
+        <span class="skill-tag">VPN</span>
+        <span class="skill-tag">GLPI</span>
+        <span class="skill-tag">Snipe-IT</span>
+        <span class="skill-tag">Backup Solutions</span>
+        <span class="skill-tag">System Monitoring</span>
+        <span class="skill-tag">Hardware Troubleshooting</span>
+    </div>
 </section>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>📧 jackxylous@gmail.com</p>
-  <p>📞 +959 25 15 35 705</p>
-  <p>🌐 cv.nyiboyz.site</p>
+<section id="contact" class="section popup">
+    <div class="section-header text-center">
+        <h2><i class="fa-regular fa-paper-plane"></i> Let's Connect</h2>
+        <p>Currently open for new IT and System Administration opportunities.</p>
+    </div>
+    
+    <div class="contact-grid text-center">
+        <a href="mailto:jackxylous@gmail.com" class="contact-box glass-card">
+            <i class="fa-solid fa-envelope"></i>
+            <p>jackxylous@gmail.com</p>
+        </a>
+        <a href="tel:+959251535705" class="contact-box glass-card">
+            <i class="fa-solid fa-phone"></i>
+            <p>+959 25 15 35 705</p>
+        </a>
+        <a href="https://cv.nyiboyz.site" target="_blank" class="contact-box glass-card">
+            <i class="fa-solid fa-globe"></i>
+            <p>cv.nyiboyz.site</p>
+        </a>
+    </div>
 </section>
 
-<footer>
-  © 2026 Kyaw Nyi Nyi Maung
+<footer class="no-print">
+    <p>© <script>document.write(new Date().getFullYear())</script> Kyaw Nyi Nyi Maung. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
